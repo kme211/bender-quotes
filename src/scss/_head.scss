@@ -1,0 +1,45 @@
+.head {
+  position: absolute;
+  background: $highlightColor;
+  width: 54%;
+  height: 69%;
+  left: (100% - 54%) / 2;
+  bottom: 5%;
+  border-top-left-radius: 60% 30%;
+  border-top-right-radius: 60% 30%;
+  border: $border;
+  border-bottom: none;
+  z-index: 3;
+  &-copy {
+    position: absolute;
+    bottom: 0;
+    height: 98%;
+    width: 85%;
+    z-index: 4;
+    left: 7.5%;
+    background: $gray;
+    border-top-left-radius: 85% 40%;
+    border-top-right-radius: 85% 40%;
+  }
+  &-copy__base,
+  &__base {
+    position: absolute;
+    height: 7%;
+    background: inherit;
+    border-bottom: $border;
+  }
+  &__base {
+    background: $highlightColor;
+    position: absolute;
+    border-radius: 43%;
+    width: 54%;
+    @include center-left(54%);
+    bottom: 2%;
+    border: $border;
+  }
+  &-copy__base {
+    width: 100%;
+    bottom: -3.7%;
+    border-radius: 29%;
+  }
+}

@@ -1,0 +1,7 @@
+@mixin center-left($perc) {
+  left: (100% - $perc) / 2;
+}
+
+@mixin center-top($perc) {
+  top: (100% - $perc) / 2;
+}

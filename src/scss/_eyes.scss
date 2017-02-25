@@ -1,0 +1,126 @@
+.eyes {
+  position: absolute;
+  height: 33%;
+  width: 143%;
+  background: $highlightColor;
+  @include center-left(143%);
+  top: 35%;
+  border-top-left-radius: 20% 50%;
+  border-bottom-left-radius: 20% 50%;
+  border-top-right-radius: 20% 50%;
+  border-bottom-right-radius: 20% 50%;
+  border: $border;
+  z-index: 4;
+  &-copy {
+    position: absolute;
+    background: $gray;
+    @include center-left(66%);
+    width: 66%;
+    height: 100%;
+    border-radius: 7%;
+  }
+  &__inner {
+    position: absolute;
+    background: $borderColor;
+    height: 90%;
+    width: 90%;
+    @include center-left(90%);
+    @include center-top(90%);
+    border-top-left-radius: 20% 50%;
+    border-bottom-left-radius: 20% 50%;
+    border-top-right-radius: 20% 50%;
+    border-bottom-right-radius: 20% 50%;
+    overflow: hidden;
+  }
+}
+
+.eyelids {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 20% 50%;
+  border-bottom-left-radius: 20% 50%;
+  border-top-right-radius: 20% 50%;
+  border-bottom-right-radius: 20% 50%;
+  overflow: hidden;
+   /* this fixes the overflow:hidden in Chrome */
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+  background: none;
+  
+  &.top.emotion-interested > &__lid:first-child {
+    height: 25%;
+  }
+ 
+  &.top.emotion-angry > &__lid {
+    height: 35%;
+  }
+  &.top.emotion-angry > &__lid:first-child {
+    transform: rotate(10deg);
+  }
+  &.top.emotion-angry > &__lid:last-child {
+    transform: rotate(-10deg);
+  }
+  &.top.emotion-sad > &__lid {
+    height: 37%;
+  }
+  &.top.emotion-sad > &__lid:first-child {
+    transform: rotate(-15deg);
+  }
+  &.top.emotion-sad > &__lid:last-child {
+    transform: rotate(15deg);
+  }
+  &.bottom.emotion-sad > &__lid {
+    height: 25%;
+  }
+  &.top.emotion-cocky > &__lid {
+    height: 45%;
+  }
+  &__lid {
+    position: absolute;
+    float: left;
+    width: 50%;
+    height: 0%;
+    background: $borderColor;
+    transition: height 1s, transform 1s;
+    
+    &:last-child {
+      left: 50%;
+    }
+  }
+  
+  &.bottom > &__lid {
+    bottom: 0;
+  }
+  &.blink {
+    animation-name: blink;
+    animation-duration: 0.5s;
+  }
+  &.bored {
+    animation-name: bored-eyes;
+    animation-duration: 3s;
+  }
+}
+
+.eye {
+  position: absolute;
+  background: $white;
+  height: 87%;
+  width: 43%;
+  border-radius: 50%;
+  @include center-top(87%);
+  &__pupil {
+    position: absolute;
+    height: 18%;
+    width: 18%;
+    @include center-top(18%);
+    @include center-left(18%);
+    background: $borderColor;
+  }
+  &.left {
+    left: 5%;
+  }
+  &.right {
+    right: 5%;
+  }
+}

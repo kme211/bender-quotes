@@ -1,0 +1,114 @@
+.antenna {
+  position: absolute;
+  @include center-left(18%);
+  width: 18%;
+  height: 23%;
+  top: 4%;
+  &__moveable {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  &__main-inner,
+  &__main-outer {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+  }
+  &__main-inner {
+    position: absolute;
+    background: $gray;
+    height: calc(100% - 1.5vmin);
+    width: calc(100% - 1.5vmin);
+    overflow: visible;
+    left: calc((100% - (100% - 1.5vmin)) / 2);
+    top: calc((100% - (100% - 1.5vmin)) / 2);
+  }
+  &__main-outer {
+    position: absolute;
+    background: $borderColor;
+    width: 32%;
+    height: 85%;
+    @include center-left(32%);
+    bottom: 0;
+  }
+  &__base {
+    position: absolute;
+    background: $highlightColor;
+    width: 100%;
+    height: 25%;
+    bottom: -12%;
+    border-radius: 50%;
+    border: $border;
+    z-index: 1;
+    &-copy {
+      position: absolute;
+      @include center-top(80%);
+      @include center-left(75%);
+      background: $gray;
+      height: 80%;
+      width: 75%;
+      border-radius: 50%;
+    }
+  }
+  &__hint {
+    position: absolute;
+    background: #0D8DBE;
+    height: 18%;
+    width: 41%;
+    top: 0;
+    @include center-left(41%);
+    border-radius: 50%;
+    &.animated {
+      animation-name: antenna-hint;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+  }
+  &__ball {
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    background: $highlightColor;
+    top: 0;
+    @include center-left(41%);
+    height: 18%;
+    width: 41%;
+    border-radius: 50%;
+    border: $border;
+    &-copy {
+      position: absolute;
+      background: $gray;
+      width: 100%;
+      height: 80%;
+      border-radius: 50%;
+      bottom: 0;
+    }
+  }
+}
+
+@keyframes move-antenna {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 70%
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes antenna-hint {
+  0% {
+    transform: scale(2);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(5);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0.4;
+  }
+}
