@@ -18,9 +18,7 @@ files.forEach(file => {
       logger.log(`Copied ${source}/${file} to ${destination}/${file}`);
     });
   });
-})
-
-
+});
 
 recursive(`${source}/icons`, function(err, icons) {
   icons.forEach(icon => {
