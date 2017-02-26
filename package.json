@@ -2,7 +2,6 @@
   "name": "bender-quotes",
   "version": "1.0.0",
   "description": "Bender quotes dispenser.",
-  "main": "index.js",
   "scripts": {
     "scss": "node-sass src/scss/style.scss dist/css/style.css",
     "copy-files": "node tools/copyFiles.js",
