@@ -20,10 +20,8 @@ function shuffle(a) {
 
 let quotes = [
   "{angry}This is the worst kind of discrimination there is: the kind against me!",
-  "{cocky}I guess if you want children beaten, you have to do it yourself.",
   "Hahahahaha. Oh wait you’re serious. Let me laugh even harder.",
   "There. Now no one can say I don’t own John Larroquette’s spine.",
-  "I’ll build my own theme park. With black jack, and hookers. In fact, forget the park!",
   "{angry}The game’s over. I have all the money. Compare your lives to mine and then kill yourselves!",
   "{sad}That’s closest thing to 'Bender is great' that anyone other me has ever said.",
   "I’m Bender, baby! Oh god, please insert liquor!",
@@ -31,7 +29,6 @@ let quotes = [
   "You know what cheers me up? Other people’s misfortune.",
   "Anything less than immortality is a complete waste of time.",
   "Blackmail is such an ugly word. I prefer extortion. The ‘x’ makes it sound cool.",
-  "{cocky}Have you tried turning off the TV, sitting down with your children, and hitting them?",
   "Oh, your God!",
   "{angry}You’re a pimple on society’s ass and you’ll never amount to anything!",
   "{sad}I’m so embarrassed. I wish everyone else was dead!",
